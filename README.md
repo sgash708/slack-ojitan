@@ -11,5 +11,6 @@ npm install @slack/events-api
 ```
 
 # REF
-https://reffect.co.jp/html/slack
-https://qiita.com/zaburo/items/69726cc42ef774990279
+[slack_bot作成(node)](https://reffect.co.jp/html/slack)
+[expressの開発にTypeScriptを利用する](https://qiita.com/zaburo/items/69726cc42ef774990279)
+[TypeScriptでExpress.js開発するときにやることまとめ (docker/lint/format/tsのまま実行/autoreload)](https://qiita.com/techneconn/items/012bdf1b9ff3881546b3#typescript%E5%B0%8E%E5%85%A5)
