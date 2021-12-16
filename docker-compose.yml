@@ -5,9 +5,12 @@ services:
       context: .
       dockerfile: "./docker/node/Dockerfile"
     tty: true
-    command: "npx ts-node app.ts"
+    # command: "npx ts-node app.ts"
     environment:
       NODE_ENV: "development"
+      PORT: "3306"
+      SLACK_BOT_TOKEN: ${SLACK_BOT_TOKEN}
+      SLACK_SIGNING_SECRET: ${SLACK_SIGNING_SECRET}
     ports:
       - "3000:3000"
     volumes:
