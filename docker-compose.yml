@@ -5,6 +5,7 @@ services:
       context: .
       dockerfile: "./docker/node/Dockerfile"
     tty: true
+    command: "npx ts-node app.ts"
     environment:
       NODE_ENV: "development"
     ports:
