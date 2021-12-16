@@ -1,7 +1,14 @@
-import express from 'express';
+import { App } from '@slack/bolt';
 
-const app: express.Express = express();
-const port: string = process.env.PORT || '3000';
+const app: App = new App({
+  token: process.env.SLACK_BOT_TOKEN,
+  signingSecret: process.env.SLACK_SIGNING_SECRET
+});
 
-app.get('/', (req, res) => res.send('Hello world!!'));
-app.listen(port, () => console.log(`listening on port ${port}!`));
+app.message('hello', async ({ message, say }) => {
+  await say(`hello <@${message.type}>!`);
+});
+
+(async () => {
+  await app.start(Number(process.env.PORT));
+})();
